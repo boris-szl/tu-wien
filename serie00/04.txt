@@ -1,0 +1,24 @@
+
+4.4 Fragen - Antworten
+
+a) Variable
+
+	Eine Variable ist ein symbolischer Name für ein Speicherbereich.
+
+b) Datentyp
+
+	Datentypen sind verschiedenartige Mengen von Zahlen, mit denen der Computer Operationen durchführt wie z.B. Ganzzahlen (int), Gleitkommazahlen (float, double) und darstellbare Zeichen (char).
+
+c) Unterschied zwischen Inititalisierung und Deklaration
+
+	Deklaration
+	Bei der Deklaration erfolgt die Zuweisung eines Speicherbereichs auf eine Variable mit einem bestimmten Datentyp.
+
+	Initialisierung
+	Bei der Initialisierung wird der deklarierten Variable nur ein Wert zugewiesen. 
+
+d) Warum gibt es verschiedene Datentypen um Zahlen darzustellen?
+	
+	Mittel verschiedenen Datentypen lassen sich verschiedene Sachverhalte und Zusammenhänge definieren, sodass der Computer auf diesen unterschiedliche mathematische Operationen durchführen kann. Wenn der Computer z.B. den Datentyp double, float nicht kennt, dann kann er könnte er keine Operationen auf den reellen Zahlen durchführen. Seine mathematische Funktion wäre beschränkt.
+
+	B2
