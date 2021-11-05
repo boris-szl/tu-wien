@@ -4,7 +4,7 @@
 
 // Author: Szelcsanyi Boris
 // Datte: 04.11.2020
-// Last updated: 04.11.2020
+// Last updated: 05.11.2020
 
 
 // Input: beliebiges x
@@ -16,6 +16,8 @@
 // Wir definieren eine Funktion zur Ermittlung der Wurzel einer beliebigen Zahl x
 // gemäss dem Heron-Verfahren (Babylonian Method)
 // babylonian method aka. heron verfahren for finding sqrt
+// Heron-Verfahren, Heronsche Näherungsverfahren oder babylonische Wurzelziehen ist ein Rechenverfahren 
+// zur Berechnung einer Näherung der Quadratwurzel einer reellen Zahl a>0.
 // Wiki: https://de.wikipedia.org/wiki/Heron-Verfahren
 // source: https://stackoverflow.com/questions/19611198/finding-square-root-without-using-sqrt-function/40528142
 
@@ -31,7 +33,7 @@ double wurzel(double x) {
 }
 
 int wurzelschranke(double x) {
-	int k = 0; // Iniitalisierung von null, da sonst garbage
+	int k = 0; // Iniitali	sierung von null, da sonst garbage
 	while (k <= wurzel(x)) { // solange k kleiner gleich die wurzel(x) ist
 		k++; // postinkrementiert k, d.h. als erster auswerten, dann erhöhen
 		if (wurzel(x) < k+1) { // sobald k+1 strikt grösser als wurzel(x) ist

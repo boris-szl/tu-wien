@@ -5,18 +5,20 @@
 // Date: 11/03/2021
 // Last updated: 11/03/2021
 
-// netwon method
-// bisection method
 
-void scanVector(int n); // deklaration einer void funktion
-// liest die vektoren einer n-dimensionalen vektoraums ein...
+// void scanVector(int x[], int dim) {
+// 	int i;
+// 	for (i=0;i<dim;i++) {
+// 		scanf("%d", &x[i]);
+// 	}
+// }
 
 double geometricMean(double x[], int n) {
 	double product;
-	for (int i=0;i<n;i++) {
-		product += x[i] * x[i+1];
+	while (++i < n) {
+		product *= x[i];
 	}
-	return pow(product, 1./n);
+	return pow(product, 1/(double) n);
 }
 
 int main() {
@@ -33,7 +35,6 @@ int main() {
 	for (int i=0;i<n;i++) {
 		printf("%.2f\n", u[i]);
 	}
-
 	// Ausführen der Funktion
 	printf("%f\n", geometricMean(u,n));
 
@@ -41,6 +42,10 @@ int main() {
 
 
 // Testing
+// Überprüfung durch: http://www.alcula.com/calculators/statistics/geometric-mean/
 // Input: x[3] = [2,4,2]
 // Desired Output = 2.519842
+
+// Input: x[3] = [123, 213, 214]
+// Desired Output = ....
 

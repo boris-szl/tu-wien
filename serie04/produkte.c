@@ -7,7 +7,7 @@
 
 void scanVektor(double u[]);
 
-void vektorprodukt(double u[], double v[], double w[]) {
+void vektorprodukt(double u[], double v[]) {
 	double w_1, w_2, w_3;
 	w_1 = u[1] * v[2] - u[2] * v[1];
 	w_2 = u[0] * v[2] - u[2] * v[0];
@@ -15,10 +15,6 @@ void vektorprodukt(double u[], double v[], double w[]) {
 	printf("w_1 = %f\n", w_1);
 	printf("w_2 = %f\n", w_2);
 	printf("w_3 = %f\n", w_3);
-	w[] = {w_1, w_2, w_3};
-	for (int i=0;i<3;i++) {
-		printf("%f\n", w[i]);
-	}
 }
 
 double skalarprodukt(double u[], double v[]) {
@@ -35,6 +31,7 @@ int main() {
 	double u[3]; // festlegen der grösse des statistischen arrays
 	double v[3]; // -- '' -- 
 	double w[3]; // -- '' -- 
+
 	printf("Einscannen des Vektors 'u'\n");
 	for (int i=0;i<3;i++) {
 		scanf("%lf", &u[i]);
@@ -48,9 +45,15 @@ int main() {
 	printf("%f\n",skalarprodukt(u,v));
 
 	// Aufruen des Funktion "Vektorenprodukt"
-	vektorprodukt(u,v,w);
+	vektorprodukt(u,v);
 }
 
 // Skalarprodukt
 // Testing für kleine Zahlen
 // u = (1,2,3), v =(1,2,3)
+// Output: 12
+
+// u = (1,2,3) v = (4,5,6)
+// Output: 32
+
+// // v = (1,2,3) u = (4,5,6) umgekehrt

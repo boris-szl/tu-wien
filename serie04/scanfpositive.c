@@ -3,6 +3,7 @@
 // Funktion für die Eingabe
 double scanfpositive() {
 	double tau;
+	printf("Eingabe vektor:\n");
 	while (tau <= 0) {
 		scanf("%lf", &tau);
 	}
@@ -13,6 +14,9 @@ double scanfpositive() {
 // Execute via Hauptprogramm
 int main() {
 
-	printf("%.2f\n"scanfpositive());
-	// scanfpositive();
+	scanfpositive();
 }
+
+// Testing
+// Eingabe einer negativen Zahlen
+// Für 0 geht es auch nicht
