@@ -4,9 +4,10 @@
 
 // Author: Boris Szelcsanyi
 // Date created: 09/11/2021
+// Last updated: 10/11/2021
 
 void scanVector(double x[], int n) {
-	for (int i=0;i<n;i++) {
+	for (int i=0;i<n;++i) {
 		scanf("%lf", &x[i]);
 	}
 }
@@ -26,6 +27,7 @@ double pnorm(double x[], int n, double p) {
 	}
 	return pow(result, (double) 1/p);
 }
+
 
 int main() {
 	int n;
@@ -47,8 +49,6 @@ int main() {
 }
 
 
-
-
 // Testing (Wikipedia)
 // Sei Vektor x = (3,-2,6)
 // p-norm für p=1 (1-Norm) folgt 11
@@ -56,4 +56,9 @@ int main() {
 // p-norm für p=3 (3-Norm) folgt approx. 6.308 (6.307994)
 // p-norm für p=unendlich (Unendlich-Norm) folgt 6. 
 	// p -> unendlich konvergiert gegen 6, also dem grössten Wert des Vektors
+// Sei Vektor x = (3.5,2.6,-3)
+// für p = 1, folgt p-norm = 9.1
+// für p = 2, folgt p-norm = 5.292447
+// für p -> unendlich, folgt p-norm = 3.5
+	// üperprüfung mit sehr grossem p. Sei p=25, dann p-norm = 3.503019
 
