@@ -5,28 +5,27 @@
 
 // Author: Boris Szelcsanyi
 // Date created: 10/11/2021
-// Last updated. 10/11/2021
+// Last updated. 14/11/2021
 
 void zeilensumme(int m, int n, double matrix[m][n]);
 double zeilensummennorm(int m, int n, double matrix[m][n]);
 
 int main() {
 
-	int m,n,row,col, sum = 0, row_ind = 0;
-    printf("Einlesen der Anzahl der Zeilen m, Spalten m:\n");
-    scanf("%d %d",&m,&n);
-    int row_arr[m];
+	int m,n;
 	int i,j;
-    double mat[m][n];
-    printf("Einlese der Werte für die Mattrix[%d][%d]:\n", m,n);
+    printf("Einlesen der Anzahl der Zeilen m und Spalten m:\n");
+    scanf("%d %d",&m,&n);
+    double A[m][n];
+    printf("Einlesen der Werte für die Mattrix[%d][%d]:\n", m,n);
     for (i=0;i<m;i++) {
     	for (j=0;j<n;j++) {
-    		scanf("%lf",&mat[i][j]);
+    		scanf("%lf",&A[i][j]);
     	}
     }
     int z = 0; // Länge der Zeilenvektors row_arr[z]
     printf("Zeilnesummennorm:\n");
-	printf("%f\n", zeilensummennorm(m,n,mat));
+	printf("%f\n", zeilensummennorm(m,n,A));
 
 }
 
@@ -45,13 +44,14 @@ double zeilensummennorm(int m, int n, double matrix[m][n]) {
 	}
 	return max_sum;
 }
-	
+
+
 
 // Testing
 // Case 1: Sei A eine 2x3 Matrix mit {{1,-2,3}, {4,5,-6}}
  // Desired output: 15
-// Case 2: Sei A eine 3x2 Matrix mit {{1,-2},{14,-12},{23,-50}}
- // Desired output: 73
+// Case 2: Sei A eine 3x2 Matrix mit {{1,-2},{77,-12},{23,-50}}
+ // Desired output: 89
 // Case 3: Sei A eine quadratische Matrix {{12,-12,14}{12,-31,34},{1,1,1}}
  // Desired output: 77
 
