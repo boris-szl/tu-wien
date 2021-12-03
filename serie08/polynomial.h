@@ -18,6 +18,7 @@ Poly* delPoly(Poly* a);
 int getPolyDegree(Poly* a);
 double getPolyCoefficient(Poly* a, int i);
 void setPolyCoefficient(Poly* a, int i, double a0);
-
+double prodPoly(Poly* a, Poly* b);
+double differentialPolynomial(Poly* a);
 
 #endif
