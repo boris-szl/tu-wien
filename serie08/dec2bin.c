@@ -52,7 +52,7 @@ int main() {
     }
     printf("\n");
 
-    free(binary)
+    free(binary);
     binary = NULL;
 }
 

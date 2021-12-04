@@ -1,5 +1,5 @@
-#ifndef INCLUDE_POLY__
-#define INCLUDE_POLY__
+#ifndef INCLUDE_STRUCT_POLY__
+#define INCLUDE_STRUCT_POLY__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,11 +14,22 @@ typedef struct _Poly_ {
 } Poly;
 
 Poly* newPoly(int n);
+
 Poly* delPoly(Poly* a);
+
 int getPolyDegree(Poly* a);
+
 double getPolyCoefficient(Poly* a, int i);
+
 void setPolyCoefficient(Poly* a, int i, double a0);
+
 double prodPoly(Poly* a, Poly* b);
-double differentialPolynomial(Poly* a);
+
+Poly* differentialPolynomial(Poly* a);
+
+void printPoly(Poly* a, int n);
+
+
+
 
 #endif

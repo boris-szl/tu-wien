@@ -25,7 +25,7 @@ Schreiben Sie eine Funktion void bubbleSort(double* x, int n),
 /*
 
 Bubble sort is a simple sorting algorithm that works in O(n2) time. 
-The algo- rithm consists of n rounds, and on each round, 
+The algorithm consists of n rounds, and on each round, 
 it iterates through the elements of the array. 
 Whenever two consecutive elements are found that are in wrong or- der, 
 the algorithm swaps them.
