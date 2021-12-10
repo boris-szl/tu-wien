@@ -8,6 +8,7 @@
 #include <cassert>
 #include <string>
 #include <iostream>
+#include <cctype>
 
 using std::string;
 
@@ -17,6 +18,8 @@ private:
 	string name;
 	string surname;
 public:
+	Name();
+	Name(string, string);
 	// get and set methods
 	string getName();
 	void setName(string);
