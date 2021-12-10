@@ -7,7 +7,10 @@ Customer::Customer(){
 Customer::Customer(string name, double balance) {
 	this->name = name;
 	this->balance = balance;
-	pin = rand() % 1000 + 8999;
+	// A typical way to generate trivial pseudo-random numbers in a determined range 
+	// using rand is to use the modulo of the returned value by the 
+	// range span and add the initial value of the range:
+	pin = rand() % 8999 + 1000 ;
 }
 	// get and set methods
 void Customer::setName(string name) {
@@ -39,11 +42,23 @@ void  Customer::printBalance() {
 
 bool Customer::checkPIN(int pin_to_check) {
 	if (pin_to_check == pin) {
-		return 1;
+		return true;
 	}
-	return 0;
+	return false;
 }
 
 void Customer::drawMoney(double amount) {
-	balance -= amount;
+	pin = getPin();
+	int input;
+	std::cout<<"Eingabe des PINS:\n"<<std::endl;
+	std::cin>>input;
+	if (input == pin) {
+		balance -= amount;
+	} else {
+		std::cout<<"Falscher PIN"<<std::endl;
+	}
 }
+
+
+
+
