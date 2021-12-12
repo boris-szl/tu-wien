@@ -21,8 +21,8 @@ int main() {
 		printf("beide Werte müssen positiv sein\n");
 		scanf("%d %d", &n,&k);
 	}
-	printf("%d\n", binomial(n,k));
-	printf("%lu\n", binomial2(n,k));
+	printf("%d\n", binomial(n,k)); // for loop
+	// printf("%lu\n", binomial2(n,k));
 
 }
 
@@ -36,7 +36,6 @@ int binomial(int n, int k) {
 	return zaehler / nenner;
 }
 
-
 unsigned long binomial2(unsigned int n, unsigned int k) {
 	unsigned long zaehler = 1;
 	unsigned long nenner = 1;
@@ -47,14 +46,6 @@ unsigned long binomial2(unsigned int n, unsigned int k) {
 		nenner *= k - i;
 	}
 	return zaehler / nenner;
-}
-
-
-unsigned long factorial(unsigned int n) {
-	res = 1;
-	for (int i;i<n;i++) {
-		res *= res * i
-	}
 }
 
 
