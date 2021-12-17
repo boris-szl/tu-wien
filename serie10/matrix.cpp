@@ -1,5 +1,4 @@
 #include "matrix.hpp"
-#include "vector.hpp"
 
 
 // Für Matrizen
@@ -77,7 +76,7 @@ double Matrix::norm() {
 // Aufgabe 10.4
 
 void Matrix::scanMatrix() {
-	assert(n>0); // aus dem grund weil standardkonstruktor setzt n auf 0 und somit können keine koeffizienten eingelesen werden
+	assert(this->n>0); // aus dem grund weil standardkonstruktor setzt n auf 0 und somit können keine koeffizienten eingelesen werden
 	for (int j=0;j<n;j++) {
 		for (int k = 0; k<n;k++) {
 			std::cout<<"Matrix"<<"["<<j<<"]"<<"["<<k<<"] = ";
@@ -131,20 +130,58 @@ double Matrix::trace() {
 
 // Aufgabe 10.5 
 
-double Matrix::RowSumNorm() {
-	return 0;
+double Matrix::ColumnSumNorm() {
+	double sum;
+	double max_sum = 0;
+	for (int j=0;j<n;j++) {
+		sum = 0;
+		for(int k=0;k<n;k++) {
+			sum += fabs(matrix[k][j]);
+		}
+		if (sum > max_sum) {
+			max_sum = sum;
+		}
+	}
+	return max_sum;
 }
 
-double Matrix::ColumnSumNorm() {
-	return 0;
+double Matrix::RowSumNorm() {
+	double sum;
+	double max_sum = 0;
+	for (int j=0;j<n;j++) {
+		sum = 0;
+		for(int k=0;k<n;k++) {
+			sum += fabs(matrix[j][k]);
+		}
+		if (sum > max_sum) {
+			max_sum = sum;
+		}
+	}
+	return max_sum;
 }
+
 double Matrix::frobeniusNorm() {
-	return 0;
+	double sum;
+	sum = 0;
+	for (int j=0;j<n;j++) {
+		for (int k=0;k<n;k++) {
+			sum += pow(matrix[j][k],2);
+		}
+	}
+	return sqrt(sum);
 }
 
 double Matrix::maxNorm() { 
-	return 0;
-
+	int max;
+	max = 0;
+	for (int j=0;j<n;j++) {
+		for (int k=0;k<n;k++) {
+			if (fabs(matrix[j][k]) > max) {
+				max = fabs(matrix[j][k]);
+			}
+		}
+	}
+	return max;
 }
 
 

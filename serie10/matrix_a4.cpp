@@ -8,28 +8,29 @@ using std::endl;
 int main() {
 	cout<<"Hello World"<<endl;
 
-	// standard constructor && .printMatrix() 
-	Matrix matrix_1;
-	matrix_1.printMatrix();
-	// user defined constructor && .printMatrix()
-	Matrix matrix_2(4);
+	// testing .RowSumNorm()
+	// Matrix matrix_1;
+	// matrix_1.scanMatrix(3);
+	// matrix_1.printMatrix();
+	// cout<<"row sum norm = "matrix_1.RowSumNorm()<<endl;
+
+	// testing .ColumnSumNorm()
+	Matrix matrix_2(3);
+	matrix_2.scanMatrix();
 	matrix_2.printMatrix();
+	cout<<"row sum norm = "<<matrix_2.RowSumNorm()<<endl;
+	cout<<"column sum norm = "<<matrix_2.ColumnSumNorm()<<endl;
 
-	// thrid constructor && .printMatrix()
-	Matrix matrix_3(5,1);
-	matrix_3.printMatrix();
+	// testing .FrobeniusNorm()
 
-	// testing .scanMatrix()
-	// matrix_1.scanMatrix(); assertion error
-	matrix_1.scanMatrix(3);
-	matrix_1.printMatrix();
+	// testing .maxNorm()
+	cout<<"norm = "<<matrix_2.maxNorm()<<endl;
 
-	// testing traceMethod mit 3x3 matrizen
-	cout<<"tr(matrix_3) = "<<matrix_3.trace()<<endl;
-	cout<<"tr(matrix_1) = "<<matrix_1.trace()<<endl;
-	// 1) summe der hauptdiagonale = 0
-	// 2) summe der hauptdiagonale = negativ
-	// 3) summe der hautpdiagonale = positiv
+
+	// testing .frobeniusNorm()
+	cout<<"frobeniusnorm = "<<matrix_2.frobeniusNorm()<<endl;
+
+
 
 	return 0;
 }
