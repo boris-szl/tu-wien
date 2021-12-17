@@ -13,14 +13,15 @@ double zeilensummennorm(int m, int n, double matrix[m][n]);
 int main() {
 
 	int m,n;
-	int i,j;
-    printf("Einlesen der Anzahl der Zeilen m und Spalten m:\n");
+	int j,k;
+    printf("Einlesen der Anzahl der Zeilen m und Spalten n:\n");
     scanf("%d %d",&m,&n);
     double A[m][n];
     printf("Einlesen der Werte für die Mattrix[%d][%d]:\n", m,n);
-    for (i=0;i<m;i++) {
-    	for (j=0;j<n;j++) {
-    		scanf("%lf",&A[i][j]);
+    for (j=0;j<m;j++) {
+    	for (k=0;k<n;k++) {
+    		printf("Matrix[%d][%d] = ",j,k);
+    		scanf("%lf",&A[j][k]);
     	}
     }
     int z = 0; // Länge der Zeilenvektors row_arr[z]
