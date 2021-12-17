@@ -1,5 +1,4 @@
 #include "matrix.hpp"
-#include <iostream>
 
 using std::cout;
 using std::cin;
@@ -10,7 +9,7 @@ int main() {
 	// main for testing the library
 	// testing first constructor
 	Matrix matrix_1;
-	cout<<matrix_1.size()<<endl;
+	cout<<"Matrixdimension = "<<matrix_1.size()<<endl;
 
 	// testing second constructor
 	Matrix matrix_2(2);
@@ -20,13 +19,15 @@ int main() {
 	// testing third constructor
 	Matrix matrix_3(3,4);
 	cout<<"Matrixdimension = "<<matrix_3.size()<<endl;
-	// get first entry k-1 = 1-1 = 0
-	cout<<matrix_3.get(0)<<endl;
-	// get last entry is dim-1 = 8
-	cout<<matrix_3.get(8)<<endl;
 
-	// cout<<matrix_3.get(9)<<endl;
-	// -> output assertion error
+	// get first entry k-1 = 1-1 = 0
+	cout<<matrix_3.get(0,0)<<endl;
+
+	// get last entry
+	cout<<matrix_3.get(2,2)<<endl;
+	// test for assertion
+	// cout<<matrix_3.get(3,3)<<endl;
+
 
 	// destructor is called at the end
 	// of the program
