@@ -4,17 +4,18 @@
 #include <cmath>
 #include <cstdlib>
 #include <cassert>
+#include <iostream>
 
-// Bibliothek für quadratische Matrix
-
+// Bibliothek für Vektoren und quadratische Matrix
 
 // The class Matrix stores in Rd
 
 class Matrix {
 private: 
 	// dimension of the Matrix
+	int n;
 	int dim;
-	double* coeff;
+	double** matrix;
 public:
 	// constructor and destructor
 	Matrix();
@@ -26,13 +27,27 @@ public:
 	int size();
 
 	// reand and write coefficients
-	void set(int k, double value);
-	double get(int k);
+	void set(int k, int j, double value);
+	double get(int j,int k);
 
 	// compute Euclidian norm
 	double norm();
 
-	// 
+	// Aufgabe 10.4
+	// for exisiting matrix with n
+	void scanMatrix();
+	// overwriting matrix with new n
+	void scanMatrix(int n);
+	void printMatrix(int n);
+	double trace();
+
+	//  Aufgabe 10.5
+	double ColumnSumNorm();
+	double RowSumNorm();
+	double frobeniusNorm();
+	double maxNorm();
+
+	void printMatrix();
 
 };
 
