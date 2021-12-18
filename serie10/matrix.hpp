@@ -19,8 +19,8 @@ private:
 public:
 	// constructor and destructor
 	Matrix();
-	Matrix(int dim);
-	Matrix(int dim, double value);
+	Matrix(int n);
+	Matrix(int n, double value);
 	~Matrix();
 
 	// return matrix dimension
@@ -30,8 +30,6 @@ public:
 	void set(int k, int j, double value);
 	double get(int j,int k);
 
-	// compute Euclidian norm
-	double norm();
 
 	// Aufgabe 10.4
 	// for exisiting matrix with n
@@ -48,6 +46,9 @@ public:
 	double maxNorm();
 
 	void printMatrix();
+
+	// other methods
+	void unitMatrix(int n);
 
 };
 

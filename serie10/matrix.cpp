@@ -46,6 +46,7 @@ Matrix::Matrix(int n, double init) {
 	}
 }
 
+
 Matrix::~Matrix() {
 	if (dim > 0) {
 		free(matrix);
@@ -69,12 +70,7 @@ double Matrix::get(int j, int k) {
 	return matrix[j][k];
 }
 
-double Matrix::norm() {
-	return 0;
-}
-
 // Aufgabe 10.4
-
 void Matrix::scanMatrix() {
 	assert(this->n>0); // aus dem grund weil standardkonstruktor setzt n auf 0 und somit können keine koeffizienten eingelesen werden
 	for (int j=0;j<n;j++) {
@@ -184,12 +180,24 @@ double Matrix::maxNorm() {
 	return max;
 }
 
+void Matrix::unitMatrix(int n) {
+	assert(n>0);
+	this->n = n;
+	dim = n*n;
+	matrix = (double**) malloc(n*sizeof(double*));
+	assert(matrix != (double**) 0);
+	int row_count = n;
+	while(row_count--) {
+		matrix[row_count] = (double*) malloc(n*sizeof(int*));
+	}
+	for (int j=0;j<n;j++) {
+		for (int k=0;k<n;k++) {
+			if ( j == k ) {
+				matrix[j][k] = 1;
+			} else {
+				matrix[j][k] = 0;
+			}
+		}
+	}
+}
 
-
-
-/*
-Eine Matr
-
-
-
-*/
