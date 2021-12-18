@@ -31,5 +31,9 @@ int main() {
 	// 2) summe der hauptdiagonale = negativ
 	// 3) summe der hautpdiagonale = positiv
 
-	return 0;
+	// test .unitMatrix()
+	Matrix matrix_4;
+	matrix_4.unitMatrix(3);
+	matrix_4.printMatrix();
+	cout<<"tr(matrix_4) = "<<matrix_4.trace()<<endl;
 }
