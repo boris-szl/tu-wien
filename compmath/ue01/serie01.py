@@ -1,5 +1,6 @@
 import math
 
+# Problem 1
 def intbreak(n):
 	return [k+1 for k in range(n)]
 
@@ -12,7 +13,6 @@ def reorder(n):
 def main():
 	# Testing intbreak(n)
 	print(intbreak(10))
-
 
 	# Testing reorder(n)
 	print(reorder(364812))
