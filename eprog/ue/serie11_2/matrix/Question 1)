@@ -1,0 +1,87 @@
+Question 1)
+
+1) 
+
+Given:
+
+Let S_i be the set of stores = {1JS,2WS,3PUFF}.
+Let P_i be the set of productts = {AAPL,BBRD,CCC}.
+
+Let L_j be the set of production limit for each product, where
+j is the name of a baked good.
+L_j := {700,1600,2000}, L_appl = 700, L_bbrd = 2000, L_ccc = 1600.
+
+activity_type can be order or shipment
+	if activity_type == "order"
+		if loc == "1JS"
+			increment by one
+		else if (loc == " 2WS")
+			increment by one
+		else if (loc == "3PUFF")
+			increment by two
+	else if (activity_type == "shipment")
+		if loc == "1JS"
+			decrement by one
+		else if (loc == " 2WS")
+			decrement by one
+		else if (loc == "3PUFF")
+			decrement by two
+
+
+
+let activity_check be a function that checks for activity_type
+activity_check():
+	if activity_type == "order"
+		return 1
+
+
+location_check be a functio that check location
+
+location_check():
+	if loc == "1JS"
+		increment by one
+	else if (loc == " 2WS")
+		increment by one
+	else if (loc == "3PUFF")
+		increment by two
+
+Delta Inventory
+
+for each bakery I_t (for Invetory at date t is 500)
+Each item in I_0 for 1JS, 2WS, 3PUFF = 500
+I = {22,23,24}
+
+Inventory for 1JSfor 22
+AAPL for t_0 = 500
+On the 20.08 there are how many orders and shipments of AAPL at JS
+APPL Orders = 10, Shipments = 0,
+baking items arrive 1 day later
+if order then decrement by quantity on the next day
+
+starting inventory for item = tmp
+tmp = 500
+so for the ith_order of item on date increment date+1 
+
+for example inventory_date 22.08
+inventory for 21.08
+
+order of ccc for 2ws with quantity of 80 on 20.08, if inventory date on 21.08,
+then increment tmp = 500 by quantity of 80. Therefore new tmp = 580 on 21.08
+
+1) Solution
+
+I am not sure if I need to document my approach, however, I still did.
+
+Given the order and shipment information.I have just naively implemented a sequence of nested if-else statements, that consider the given conditions based on the provided information in the description. I didn't use VBA because I am not familiar. I was thinking of the problem in whole as a coding problem, which means, having the approach of thinking, how would I solve this in Python for example. 
+
+Nevertheless I approached the problem in a cartesian or, one could say, by the divide and conquer principle, which is pointed out by the additional tables (steps) I made in order to try to arrive to a valid solution.
+
+I did not straight compute the action for 1.First, I gradually checked if it is an order xor shipment, then I extended the code, introducing the conditon that checked for the location, giving me a single text output, as you can see in column G (which in the "data" sheet is hidden). It is just for validating the correctnes of the output. I tested this for couple of cells, to make sure that I had no errors in the input. Before applying the command for each cell, I sorted the activity date, to get a better overview of the whole data. I believe that I did not skew the data while doing that.
+
+
+
+
+
+
+I am aware that there is a possible chance of having done a mistake in my problem solving, if so, I am really thankful to get a feedback on my approach.
+
