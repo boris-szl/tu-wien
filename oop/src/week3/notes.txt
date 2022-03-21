@@ -1,0 +1,93 @@
+
+
+
+Klasse ist ein Blueprint bzw. eine Kollektion von Eigenschaften und Verhaltensweisen (Methoden)
+
+Objekt ist eine Instanz der Klasse.
+
+
+Message
+
+In Java gibt es keine Funktionen. Java ist eine reine OO-Porgrammierung. Alles exisitert in einer Klasse. Um überhaupt ein Main definieren zu kännen, müssen wir eine Klasse definieren.
+
+Klassen immer vereinzelt definieren. Auch die Subklassen als separate Files?
+
+
+Deklaration und Initialisierung von Listen
+Wir brauchen die Collection mit einem generischen Datentyp  und dann weisen wir eine Liste zu mit "new ArrayList"
+
+
+Also Collection<String> c1  = new ArrayList<>();
+auch möglich Collection<string> c1 = newArrayList<String>();
+
+Warum schreiben wir in die <> bei der Initialisierung von newArrayList<>; nicht rein? Kann man, denselben DType wie bei der Deklaration. Allerding sollte man das nicht, weil es die Gefahr eines Type Mismatches erhöht und dieser zu einem Complie Error führen kann.
+
+
+Primitive Datentypen:
+...sind keine Klassen
+...jeder primitiver DTyp hat eine Wrapperklasse
+...brauchen wir um prim. DType auf Klasse zu konvertieren?
+
+
+LISTEN
+Listen leisten sich ab vom Interface Collection.
+Also Collection ist ein Interface.
+Was sind nochmal Interfaces
+LinkedList ist eine
+
+Um über eine Liste zu iterieren brauchen wir eine Iterator.
+Iterator leitet sich auch vom Interface Collection ab.
+
+KLASSE
+Die Initialisierung mit "null" ist in Java nur fakultativ und nicht obligatorisch, weil Java das selber macht.
+
+Die Vererbung ist eine einfache Transitivität.
+für all x,y,z (wenn x = y und y = z, dann x = z)
+
+Wie schaut es aus mit den Konstruktoren? Ist es notwendig einen Konstruktor in Java für die Klassendefinition notwending? Nein. Der Compiler erstellt einen Default-Konstruktor.
+Ein Default-Konstruktor ohne Paramter wird erstellt. Bei einer Vererbung wir der Default-Konstruktor der Superklasse aufgerufen, wenn für die Subklasse kei Konstruktor defniert wurde.
+
+Constructor Chaining
+In einem Konstruktor wird ein anderer Konstruktor aufgerufen.
+
+Methoden
+Methoden kommunizieren mit den 
+
+
+LinkedList
+Ich geh durch bis ich wieder auf Null bin.
+Es wird immer dazu allokiert. LinkedList ist dynamische Speicherverwaltung.
+Wo wird festgelegt wo null ist.
+
+BinaryTress (Binärbäume)
+
+
+
+
+
+Overriding
+...um den Polymorphismus auzunutzen
+...Methoden werden spezifisch überschrieben in einer Subklasse
+...
+
+Was ist ein Package
+...geg. verschieden Klassen mit State und Behavior.
+Package bündelt die verschiedenen Klaase als eine Einheit.
+z.b. Package für Mathematik -> Vektoren, Matrix und und und 
+Dies wird gebündel. 
+Grundidee ist die Wiederverwendbarkeit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

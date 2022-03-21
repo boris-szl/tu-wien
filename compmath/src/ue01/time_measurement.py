@@ -50,6 +50,10 @@ def pc_toc():
 	else:
 		print("pc_toc(): start time ( pc_tic() ) not set")
 
+
+# time.perf_counter() -> most accurate
+# Why? 
+# Source: https://www.webucator.com/article/python-clocks-explained/
 def calculate_time(func):
 	def inner1(*args, **kwargs):
 

@@ -1,7 +1,7 @@
 import math
 import time
 import copy
-from measuringTime import *
+from time_measurement import *
 
 def wallTime(paramter_to_pass, function_to_call):
 	start_time = time.time()
@@ -29,7 +29,7 @@ def reorder(n):
 
 
 def main():
-	# n = 364812
+	n = 364812
 	# # Testing intbreak(n)
 	# print(intbreak(10))
 
@@ -63,8 +63,13 @@ def main():
 	a = (1,2,3,4)
 	print(polynom(0.1,*a))
 
-	polynom_time= calculate_time(polynom)
+	polynom_time = calculate_time(polynom)
 	polynom_time(0.1, *a)
+
+	reorder_time = calculate_time(reorder)
+	reorder_time(n)
+
+
 
 if __name__ == "__main__": 
 	main()
