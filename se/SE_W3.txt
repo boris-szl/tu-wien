@@ -1,0 +1,20 @@
+
+Oftmals wissen die Kunden nicht was sie wollen.
+Anforderungen ermitteln.
+Man kann nicht vom einfachen Nutzer hohen technische Anforderungen erwarten.
+
+kommerzielle Softwareentwicklung -> Automatisierung von Geschäftsprozesse
+Testing und Qualitätssicherung : das meiste Geld des Budgets fliesst darein ca. 50 - 60 %
+Sicherheit unterscheidet sich von den unterschiedlichen Softwarearten.
+Bei kommerziellen Anwendungen ist Security wichtig.
+Bei embedded Systems ist es Safety.
+
+Was kauf ich zu?
+Welche bestehenden Lösungen verwende ich? (z.B. Libraries)
+Was programmiere ich selber?
+Wenn man sich von der Konkurenz unterscheiden möchte, dann muss man selber programmieren.
+
+
+
+
+
